@@ -1,0 +1,164 @@
+.Container {
+  display:grid;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.781);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .1fr 1.5fr 1.3fr;
+  grid-template-areas: 
+    "hello hello hello hello hello"
+    "profilepic profilepic intro intro decor1"
+    "decor2 description description lufi lufi";
+  grid-gap: .3em;
+}
+
+#hello {
+  grid-area: hello;
+  background-color: goldenrod;
+  text-align: center;
+  filter: grayscale(100%);
+  font-family: 'Playfair Display', serif;
+}
+#hello:hover {
+  filter: grayscale(1%);
+}
+#profilepic {
+  grid-area: profilepic;
+  background: url(profile-picture-gold.jpg) no-repeat;
+  background-position: center; 
+  background-size: cover;
+  filter: grayscale(100%);
+}
+#profilepic:hover {
+  filter: grayscale(1%);
+}
+#intro {
+  background-color: rgb(124, 154, 144);
+  grid-area: intro;
+  padding: 1em;
+  text-align: center;
+  font-family: 'Playfair Display';
+}
+#decor1 {
+  grid-area: decor1;  
+  background: url(decor1.jpg) no-repeat;
+  background-position: center; 
+  background-size: cover;
+  filter: grayscale(100%);
+}
+#decor1:hover {
+  filter: grayscale(1%); 
+}
+#decor2 {
+  grid-area: decor2;
+  background: url(decor2.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+#decor2:hover {
+  filter: grayscale(1%)
+}
+#description {
+  background-color: rgb(124, 154, 144);
+  grid-area: description;
+  padding: 1em;
+  font-family: 'Playfair Display', serif;
+}
+#lufi {
+  background-color: rgb(215, 255, 255);
+  grid-area: lufi;
+  background: url(lufi.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+#lufi:hover {
+  filter: grayscale(1%);
+}
+
+.marketer {
+  font-family: 'Anton', sans-serif;
+}
+.info{
+  font-size: .8em;
+  text-align: center;
+}
+.underline:hover {
+    text-decoration: underline;
+    color: goldenrod;
+    text-shadow: black 1px 1px 5px;
+}
+
+.creating, .hobbies {
+  text-align: center;
+  font-size: 1em;
+}
+
+.fa-brands:hover {
+  color: goldenrod;
+  transform: scale(1.4);
+}
+.fa-solid:hover {
+  color: goldenrod;
+  transform: scale(1.4);
+}
+.fa-brands {
+  color: black;
+}
+
+
+@media (max-width:550px) {
+  .Container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+      "hello"
+      "profilepic"
+      "intro"
+      "description"
+      "lufi";
+  }
+  #intro {
+    line-height: 80%;
+    padding: .1em;
+  }
+  #intro:hover {
+    background-color: goldenrod;
+  }
+  #description:hover {
+    background-color: goldenrod;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  #marketer {
+    font-size: 16px;
+  }
+  #lufi {
+    background-color: rgb(215, 255, 255);
+    grid-area: lufi;
+    background: url(lufi.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+  .fa-brands:hover {
+    color: rgb(124, 154, 144);
+    transform: scale(1.4);
+  }
+  .fa-solid:hover {
+    color: rgb(124, 154, 144);
+    transform: scale(1.4);
+  }
+  .underline:hover {
+    text-decoration: underline;
+    color: rgb(124, 154, 144);
+    text-shadow: black 1px 1px 5px;
+}
+.creating, .hobbies {
+  text-align: center;
+  font-size: .8em;
+}
+
+}
